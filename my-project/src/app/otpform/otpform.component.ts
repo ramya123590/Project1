@@ -11,7 +11,7 @@ export class OtpformComponent implements OnInit {
   submitted = false;
   constructor() { 
     this.otpForm = new FormGroup({
-      phone: new FormControl(''),
+      email: new FormControl(''),
     otp: new FormControl(''),
   
 });

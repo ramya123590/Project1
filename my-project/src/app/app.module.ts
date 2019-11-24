@@ -24,6 +24,7 @@ import { ConformpasswordformComponent } from './conformpasswordform/conformpassw
 import { UserIdComponent } from './user-id/user-id.component';
 import { EqualValidatorDirective } from './equal-validator.directive';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { NavigationProfileComponent } from './navigation-profile/navigation-profile.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
     ConformpasswordformComponent,
     UserIdComponent,
     EqualValidatorDirective,
-    AppointmentComponent
+    AppointmentComponent,
+    NavigationProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -55,65 +57,65 @@ import { AppointmentComponent } from './appointment/appointment.component';
     RouterModule.forRoot([{
       path:'Enquire',
       component:EnquireComponent,
-      data: {  show: false } 
+      data: {  show: false,shownav:false } 
     },
     {
       path:'',
       component:HomeComponent,
-      data: {  show: false }
+      data: {  show: false,shownav:false }
     },
     {
       path:'login',
       component:LoginComponent,
-      data: {  showHeader: false } 
+      data: {  showHeader: false,shownav:false }
     },
     {
       path:'Hospital',
       component:HospitalDetailsComponent,
-      data: {  show: false } 
+      data: {  show: false,shownav:false } 
     },
      
     {
       path:'NagawaraHospital',
       component:HospitalNagawaraComponent,
-      data: {  show: false }
+      data: {  show: false,shownav:false }
     },
     {
       path:'contactform',
       component:ContactFormComponent ,
-      data: {  show: false }
+      data: {  show: false,shownav:false }
     },
     {
       path:'appoinment',
       component:AppoinmentFrontComponent,
-      data: {  show: false }
+      data: {  show: false,shownav:false }
     },
     {
       path:'otpform',
       component:OtpformComponent,
-      data: { showHeader: false ,show:false,showFooter:false}
+      data: { showHeader: false,shownav:false}
     },
     {
       path:'register',
       component:RegistrationComponent,
-      data: {  showHeader: false }
+      data: {  showHeader: false,shownav:false }
     },
     {
       path:'confirmform',
       component:ConformpasswordformComponent,
-      data: {  showHeader: false ,show:false,showFooter:false }
+      data: {  showHeader: false,shownav:false }
     },
     {
       path:'afterlogin',
       component:AppointmentComponent,
-      data: {  showHeader: false ,show:false,showFooter:false }
+      data: {  showHeader: false,show:false }
     },
     {
       path:'shownav',
       component:Navigationbar2Component,
       data: {  showHeader: false ,show:false,showFooter:false }
     },
-    
+  
     ])
 
   ],
